@@ -11,6 +11,7 @@ while user_choice != "off":
     user_choice = input(f"What would you like? {MENU.get_items()}: ")
     if user_choice == "report":
         coffee_maker.report()
+        money_machine.report()
     if user_choice != "off" and user_choice != "report":
         ordered_item = MENU.find_drink(user_choice)
         
