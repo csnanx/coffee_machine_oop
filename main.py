@@ -16,6 +16,7 @@ while not off:
         off = True
     else:
         ordered_item = MENU.find_drink(user_choice)
-        if coffee_maker.is_resource_sufficient(ordered_item):
-            if money_machine.make_payment(ordered_item.cost):
-                coffee_maker.make_coffee(ordered_item)
+        if user_choice in ["latte", "espresso", "cappuccino"]:
+            if coffee_maker.is_resource_sufficient(ordered_item):
+                if money_machine.make_payment(ordered_item.cost):
+                    coffee_maker.make_coffee(ordered_item)
